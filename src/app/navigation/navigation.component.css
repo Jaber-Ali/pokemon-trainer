@@ -1,0 +1,5 @@
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    text-indent: 20px;
+}
