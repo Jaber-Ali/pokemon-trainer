@@ -12,4 +12,8 @@ export class TrainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  catchPokemon(){
+    
+  }
+
 }
