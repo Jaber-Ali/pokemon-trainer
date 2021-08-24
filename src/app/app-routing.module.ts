@@ -8,10 +8,10 @@ const routes: Routes = [
   path: 'pokemons',
   component: PokemonsComponent
 },
-{
-  path:"",
-  component: LoginComponent
-}
+// {
+//   path:"",
+//   component: LoginComponent
+// }
 ];
 
 @NgModule({
