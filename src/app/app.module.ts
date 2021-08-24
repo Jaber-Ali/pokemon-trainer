@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { TrainerComponent } from './trainer/trainer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TrainerComponent } from './trainer/trainer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
     //Http
   ],
   providers: [],
