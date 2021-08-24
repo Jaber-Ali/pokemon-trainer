@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  // username: string;
+  userName: string ="";
 
   constructor(
     private router: Router
@@ -18,11 +18,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // loginUser(){
-  //   if(this.username = "")
-     
 
-
-  // }
+ loginUserName(){
+    if(this.userName ==""){
+  
+    }else{
+      alert("Please type your name!")
+      
+    }
+  }
 
 }
