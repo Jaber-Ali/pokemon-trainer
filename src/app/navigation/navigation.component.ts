@@ -15,31 +15,30 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   
   }
-  pokemonsPage(): void {
-    if (!localStorage.getItem("trainername")) { //if no trainer logged in, so can't see Pokemon catalogue
-      this.router.navigateByUrl("/");
+//   pokemonsPage(): void {
+//     if (!localStorage.getItem("trainername")) { //if no trainer logged in, so can't see Pokemon catalogue
+//       this.router.navigateByUrl("/");
      
-   }
-    else if(localStorage.getItem("trainername")){
-     this.router.navigateByUrl("/pokemons");
-    }
+//    }
+//     else if(localStorage.getItem("trainername")){
+//      this.router.navigateByUrl("/pokemons");
+//     }
   
-}
-trainerPage(): void{
-  if (!localStorage.getItem("trainername")) { 
-    this.router.navigateByUrl("/");
+// }
+// trainerPage(): void{
+//   if (!localStorage.getItem("trainername")) { 
+//     this.router.navigateByUrl("/");
    
- }
-  else if(localStorage.getItem("trainername")){
-   this.router.navigateByUrl("/trainer");
-  }
+//  }
+//   else if(localStorage.getItem("trainername")){
+//    this.router.navigateByUrl("/trainer");
+//   }
 
-}
+// }
 
   logOut(){
     localStorage.clear();
-    this.router.navigateByUrl("/");
-
+    this.router.navigateByUrl("");
   }
 
 }

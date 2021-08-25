@@ -28,7 +28,7 @@ export class PokemonsComponent implements OnInit {
   }
   catchPokemons(pokemon: string): void {
     if (localStorage.getItem("catched-pokemons")) {
-      localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "-" + JSON.stringify(pokemon));
+      localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "," + JSON.stringify(pokemon));
 
     } else {
       localStorage.setItem("catched-pokemons", JSON.stringify(pokemon));

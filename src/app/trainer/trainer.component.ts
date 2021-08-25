@@ -7,17 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./trainer.component.css']
 })
 export class TrainerComponent implements OnInit {
-   //pokemons: string[] = [];
   
-  constructor( private route:Router) { }
+  
+  constructor() { }
 
   ngOnInit(): void {
-   //localStorage.getItem("pokemons");
+   
    
   }
-  // dispalyCatchedPokemons(){
     get pokemons():any{
-      return localStorage.getItem("catched-pokemons"); //splite to an array and later on loop in html
+      return localStorage.getItem("catched-pokemons")?.split(","); 
     }
 
   }
