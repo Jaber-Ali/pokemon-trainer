@@ -1,11 +1,4 @@
-/*Header*/
-header{
-    padding: 20px 0px;
+.center-align {
     text-align: center;
-    background-color: black;
-}
-header h1{
-    text-transform: uppercase;
-    color: beige;
-    letter-spacing: 3px;
+    margin: 20px;
 }
