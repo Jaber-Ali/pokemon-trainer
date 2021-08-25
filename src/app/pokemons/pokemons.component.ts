@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pokemon } from '../models/pokemon.model';
+
 import { DataService } from '../services/data.service'
 
 @Component({
@@ -33,6 +33,7 @@ export class PokemonsComponent implements OnInit {
     } else {
       localStorage.setItem("catched-pokemons", JSON.stringify(pokemon));
     }
+    alert(" You have catched " + " " + pokemon);
   }
 
 }

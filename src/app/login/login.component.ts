@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../services/data.service';
+
 
 
 @Component({
@@ -17,6 +17,9 @@ export class LoginComponent implements OnInit {
   ) { } //route:Router
 
   ngOnInit(): void {
+    if (localStorage.getItem("trainername")) {
+      this.router.navigateByUrl("/pokemons")
+    }
   }
 
 
