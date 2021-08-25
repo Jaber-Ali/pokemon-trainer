@@ -10,7 +10,7 @@ import { DataService } from '../services/data.service';
 })
 export class LoginComponent implements OnInit {
 
-  username: string= "";
+  trainername: string= "";
 
   constructor(
     private router: Router
@@ -20,9 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
 
- loginUserName(){
-    if(this.username !==""){
-      localStorage.setItem("username", this.username);
+ loginTrainerName(){
+    if(this.trainername !==""){
+      localStorage.setItem("trainername", JSON.stringify(this.trainername));
       console.log()
       this.router.navigateByUrl("/pokemons");
   
