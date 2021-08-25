@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../services/data.service';
-
 
 @Component({
   selector: 'app-login',
@@ -13,8 +11,8 @@ export class LoginComponent implements OnInit {
   trainername: string= "";
 
   constructor(
-    private router: Router
-  ) { } //route:Router
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -23,12 +21,9 @@ export class LoginComponent implements OnInit {
  loginTrainerName(){
     if(this.trainername !==""){
       localStorage.setItem("trainername", JSON.stringify(this.trainername));
-      console.log()
-      this.router.navigateByUrl("/pokemons");
-  
+      this.router.navigateByUrl("/pokemons");  
     }else{
-      alert("Please type your name!")
-      
+      alert("Please type your name!")      
     }
   }
 
