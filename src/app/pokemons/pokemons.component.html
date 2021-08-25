@@ -1,21 +1,24 @@
-<h1>Pokemons to catch</h1>
+<div class="center-align">
+    <h1>Pokemons to catch</h1>
+</div>
 
 <div class="pokemon-grid">
     <div class="box" *ngFor="let pokemon of pokemons">
-        <img [src]="pokemon.sprites.front_default" alt="Pokemon">
-        <h3>{{ pokemon.name }}</h3>
+        <div class="center-align">
+            <img [src]="pokemon.sprites.front_default" alt="Pokemon" class="pokemonImg">
+            <h3>{{ pokemon.name }}</h3>
+        </div>        
         <p>
             <b>Type:</b> {{pokemon.types[0].type.name}}
         </p>
         <p>
-            <b>Height:</b> {{pokemon.height}}
-        </p>
-        <p>
             <b>Health:</b> {{pokemon.stats[0].base_stat}}
         </p>
-           <button class="btn btn-danger" (click)="catchPokemons(pokemon.name)">Catch</button>
-
+        <p>
+            <b>Attack: </b>{{pokemon.stats[1].base_stat}}
+        </p>
+        <div class="center-align">
+            <button class="btn btn-danger" (click)="catchPokemons(pokemon.name)">Catch</button>
+        </div>
     </div>
-   
-
 </div>

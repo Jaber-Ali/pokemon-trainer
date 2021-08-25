@@ -1,4 +1,7 @@
 .center-align {
     text-align: center;
-    margin: 20px;
+    width: 50%;
+    padding: 30px;
+    margin-right: auto;
+    margin-left: auto;
 }
