@@ -1,8 +1,12 @@
 
-    <div class="center-align">
-        <input type="text" name="trainername"  [(ngModel)]="trainername" placeholder="Enter a username">   
-        <button (click)="loginTrainerName()" type="submit" class="btn btn-info">Login</button>
+<div class="center-align">
+    <img src="https://clipart.info/images/ccovers/1528080677ash-pikachu-png-by-sergiart.png" alt="pokemon trainer" width="150px">
+    <div class="input-group">
+        <input type="text" class="form-control" name="trainername"  [(ngModel)]="trainername" placeholder="Enter a Pokemon trainer name" aria-describedby="basic-addon2">   
+        <div class="input-group-append"> 
+            <button (click)="loginTrainerName()" type="submit" class="btn btn-info">Login</button>
+        </div>   
     </div>
-    
+</div>   
 
 
