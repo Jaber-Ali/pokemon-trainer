@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Pokemon } from '../models/pokemon.model';
 import { DataService } from '../services/data.service'
 
@@ -9,26 +10,29 @@ import { DataService } from '../services/data.service'
 })
 export class PokemonsComponent implements OnInit {
   pokemons: any[] = [];
-  constructor(private readonly dataService: DataService) { }
+  constructor(private router: Router, readonly dataService: DataService) { }
 
   ngOnInit(): void {
-    //  this.dataService.fetchPokemon()
     this.dataService.getPokemons()
-    .subscribe((response: any) =>{
+      .subscribe((response: any) => {
         response.results.forEach((result: { name: string; }) => {
-        this.dataService.getMoreData(result.name)
-        .subscribe((uniqResponse: any) => {
-        this.pokemons.push(uniqResponse);
-        console.log(this.pokemons);
+          this.dataService.getPokemonsByName(result.name)
+            .subscribe((uniqResponse: any) => {
+              this.pokemons.push(uniqResponse);
+              console.log(this.pokemons);
+            });
+
         });
-
       });
-    });
-     
-  }
-  // get pokemons(): Pokemon[] {
-  //   return this.dataService.pokemons()
 
-  // }
+  }
+  catchPokemons(pokemon: string): void {
+    if (localStorage.getItem("catched-pokemons")) {
+      localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "-" + JSON.stringify(pokemon));
+
+    } else {
+      localStorage.setItem("catched-pokemons", JSON.stringify(pokemon));
+    }
+  }
 
 }
