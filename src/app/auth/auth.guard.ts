@@ -18,7 +18,6 @@ export class AuthGuard implements CanActivate {
         } else {
           //access denied
           this.router.navigateByUrl('/login')
-          alert("You have to login");
           return false;
         }
     }
