@@ -27,11 +27,12 @@ export class PokemonsComponent implements OnInit {
 
   }
   catchPokemons(pokemon: string): void {
+    // console.log(pokemon)
     if (localStorage.getItem("catched-pokemons")) {
-      localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "," + JSON.stringify(pokemon));
+      localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "," + pokemon);
 
     } else {
-      localStorage.setItem("catched-pokemons", JSON.stringify(pokemon));
+      localStorage.setItem("catched-pokemons", pokemon);
     }
     alert(" You have catched " + " " + pokemon);
   }

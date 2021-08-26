@@ -1,11 +1,14 @@
-<h1>Trainer Catched Pokemons</h1>
+<div class="center-align">
+  <h1>Trainer Catched Pokemons</h1>
+</div>
 
 <div *ngFor="let pokemon of pokemons">
-        <div class="pokeball">
-          <div class="pokeball__button"></div>
+        <div class="pokeball" style="left: 500px;">
+          <div class="pokeball__button" ></div>
         </div>
-        <div class="center-align"><h3>{{pokemon}}</h3> </div>
-        
-      
+        <div class="center-align" >
+          <h3 class="pokename">{{pokemon}}</h3> 
+          
+        </div>
       
 </div>
