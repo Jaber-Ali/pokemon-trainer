@@ -3,9 +3,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  body {
-    background: #ecf0f1;
-  }
+
    .center-align {
       text-align: center;
       right: 60px ;
@@ -16,7 +14,14 @@
     width: 20%;
     position: relative;
     left: 510px ;
+    background-color:bisque;
     
+  }
+  hr{
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: 350px ;
   }
 
   /* Poké Styles */
@@ -59,9 +64,9 @@
     border-radius: 50%;
     z-index: 10;
     box-shadow: 0 0 0 10px black;
-    animation: blink .5s alternate 7;
+    animation: blink .7s alternate 9;
   }
-  /* Animation */
+  /* Animation pokeball */
   @keyframes blink {
     from { background: #eee;}
     to { background: #e74c3c; }
@@ -74,6 +79,7 @@
     60% { transform: translate(10px, 0) rotate(10deg); }
     100% { transform: translate(0, 0) rotate(0); }
   }
+
   @keyframes fall {
     0% { top: -200px }
     60% { top: 0 }

@@ -15,7 +15,7 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   
   }
-
+// this handles logOut and will clear everything from localStorge and redirect to Home login component
   logOut(){
     localStorage.clear();
     this.router.navigateByUrl("");

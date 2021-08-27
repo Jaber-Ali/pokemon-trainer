@@ -15,6 +15,7 @@ export class TrainerComponent implements OnInit {
    
    
   }
+  //gets catched-pokemon from local storage.
     get pokemons():any{
       return localStorage.getItem("catched-pokemons")?.split(','); 
     }

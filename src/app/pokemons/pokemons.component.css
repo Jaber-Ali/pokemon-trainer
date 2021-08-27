@@ -1,19 +1,37 @@
 .pokemon-grid{
     display: grid;
-    grid-gap: 16px;
-    padding: 20px;
+    grid-gap: 18px;
+    padding: 30px;
     grid-template-columns: repeat(auto-fit, minmax(23%,1fr));
 }
 .pokemon-grid .box{
     width: 100%;
     height: auto;
-    box-shadow: 1px 2px 5px rgba(50, 72, 105, 0.3);
+    box-shadow: 3px 2px 7px rgba(50, 72, 105, 0.3);
     background-color: whitesmoke;
     padding: 5px;
+    border-radius: 17px; 
+    cursor: pointer;
+    transition: transform .2s;
+    
+
+}
+.box:hover {
+    transform: scale(1.1); 
+
+}
+.box:hover {
+   background-color: rgb(235, 162, 186);
+  
+
 }
 .pokemonImg {
     width: 120px;
 }
-.center-align {
+.poke-card  {
     text-align: center;
 }
+.title{
+    text-align: center;  
+}
+
