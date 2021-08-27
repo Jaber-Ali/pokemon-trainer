@@ -9,17 +9,17 @@ import { DataService } from '../services/data.service'
   styleUrls: ['./pokemons.component.css']
 })
 export class PokemonsComponent implements OnInit {
-  pokemons: any[] = [];
+  pokemons: any[] = []; 
   constructor( private readonly dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getPokemons()
+    this.dataService.getPokemons() //returns and runs getPokemons method
       .subscribe((response: any) => {
         response.results.forEach((result: { name: string; }) => {
           this.dataService.getPokemonsByName(result.name)
             .subscribe((uniqResponse: any) => {
               this.pokemons.push(uniqResponse);
-              // console.log(this.pokemons);
+            
             });
 
         });
