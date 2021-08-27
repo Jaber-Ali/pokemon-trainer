@@ -10,7 +10,7 @@ import { DataService } from '../services/data.service'
 })
 export class PokemonsComponent implements OnInit {
   pokemons: any[] = [];
-  constructor(private router: Router, readonly dataService: DataService) { }
+  constructor( private readonly dataService: DataService) { }
 
   ngOnInit(): void {
     this.dataService.getPokemons()
@@ -19,13 +19,14 @@ export class PokemonsComponent implements OnInit {
           this.dataService.getPokemonsByName(result.name)
             .subscribe((uniqResponse: any) => {
               this.pokemons.push(uniqResponse);
-              console.log(this.pokemons);
+              // console.log(this.pokemons);
             });
 
         });
       });
 
   }
+  // This method is to catch pokemons and adds them to  local storage.
   catchPokemons(pokemon: string): void {
     // console.log(pokemon)
     if (localStorage.getItem("catched-pokemons")) {

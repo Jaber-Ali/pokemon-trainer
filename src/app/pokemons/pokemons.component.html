@@ -1,10 +1,11 @@
-<div class="center-align">
-    <h1>Pokemons to catch</h1>
+<div class="title"> <br>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/905237/International_Pok%C3%A9mon_logo.svg.png" style=" width:250px; ">
+    <h1>Try To Catch Pokemons</h1>
 </div>
 
-<div class="pokemon-grid">
-    <div class="box" *ngFor="let pokemon of pokemons">
-        <div class="center-align">
+<div class="pokemon-grid" >
+    <div class="box" (click)="catchPokemons(pokemon.name)" *ngFor="let pokemon of pokemons">
+        <div class="poke-card" >
             <img [src]="pokemon.sprites.front_default" alt="Pokemon" class="pokemonImg">
             <h3>{{ pokemon.name }}</h3>
         </div>        
@@ -17,8 +18,5 @@
         <p>
             <b>Attack: </b>{{pokemon.stats[1].base_stat}}
         </p>
-        <div class="center-align">
-            <button class="btn btn-danger" (click)="catchPokemons(pokemon.name)">Catch</button>
-        </div>
     </div>
 </div>

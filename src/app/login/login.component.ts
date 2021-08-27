@@ -13,14 +13,14 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
   ) { }
-
+  //Checks if is in localStorage, if so redirect to pokemons
   ngOnInit(): void {
     if (localStorage.getItem("trainername")) {
       this.router.navigateByUrl("/pokemons")
     }
   }
 
-
+ //This hanldles trainer login 
  loginTrainerName(){
     if(this.trainername !==""){
       localStorage.setItem("trainername", JSON.stringify(this.trainername));

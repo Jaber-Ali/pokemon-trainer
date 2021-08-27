@@ -12,6 +12,7 @@ export class AuthGuard implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot,state: RouterStateSnapshot):
      boolean
      {
+       //Checks if tariner is in localStorage
         if (localStorage.getItem('trainername')) {
           // access allowed
             return true;
