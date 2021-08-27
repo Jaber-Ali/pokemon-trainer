@@ -28,7 +28,6 @@ export class PokemonsComponent implements OnInit {
   }
   // This method is to catch pokemons and adds them to  local storage.
   catchPokemons(pokemon: string): void {
-    // console.log(pokemon)
     if (localStorage.getItem("catched-pokemons")) {
       localStorage.setItem("catched-pokemons", localStorage.getItem("catched-pokemons") + "," + pokemon);
 
