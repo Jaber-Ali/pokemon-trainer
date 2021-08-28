@@ -7,26 +7,29 @@
    .center-align {
       text-align: center;
       right: 60px ;
-      position: relative;
+      margin-left: auto;
+      margin-right: auto;
   }
   h3.pokename {
     border-style: inset;
     width: 20%;
-    position: relative;
-    left: 510px ;
+    margin-left: auto;
+    margin-right: auto;
     background-color:bisque;
+    border-radius: 20px;
     
   }
   hr{
     width: 40%;
     text-align: center;
-    position: relative;
-    left: 350px ;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Poké Styles */
   .pokeball {
     position: relative;
+    margin: auto;
     width: 150px;
     height: 150px;
     background: #fff;
